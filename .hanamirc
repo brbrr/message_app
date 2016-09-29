@@ -1,0 +1,4 @@
+project=message_app
+architecture=container
+test=rspec
+template=erb
