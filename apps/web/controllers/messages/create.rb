@@ -6,7 +6,7 @@ module Web::Controllers::Messages
 
     def call(params)
       @message = Message.new(text: params[:message][:text])
-      @message.create_trigger(type: params[:message][:trigger], value: params[:message][:value])
+      @message.create_trigger(type: params[:trigger], value: params[:message][:value])
       @message = MessageRepository.create(@message)
       hshd_id = Hashids.new('message_app', 8).encode(@message.id)
       @url = routes.root_url + hshd_id

@@ -2,30 +2,21 @@
 <%= form_for :message, routes.root_path do
   div(class: 'form-group') do
     label 'Message Text'
-    textarea :text, class: "form-control",rows: "3", placeholder: "Type your message here"
-  end
-  div(class: 'form-group') do
-    div(class: 'input-group') do
-      span(class: 'input-group-addon') do
-        radio_button :trigger, :views
-      end
-      text_field :value, class: "form-control", placeholder: "Number of views"
-    end
-  end
-  div(class: 'form-group') do
-    div(class: 'input-group') do
-      span(class: 'input-group-addon') do
-        radio_button :trigger, :hours
-      end
-      text_field :value, class: "form-control", placeholder: "Number of hours"
-    end
+    text_area :text, class: "form-control", rows: "3", placeholder: "Type your message here"
   end
 
-  radio_button :trigger, :hours
-  
-  # div(class: 'form-group') do
-  #   radio_btn(:hours, 'Will be deleted after 1 hour')
-  #   radio_btn(:views, 'Will be deleted after 1 view')
-  # end
+  div(class: 'form-group') do
+    radio_btn(:views, 'Expire by view')
+  end
+
+  div(class: 'form-group') do
+    radio_btn(:hours, 'Expire after 1 hour')
+  end
+
+  div(class: 'form-group') do
+    text_field :value, class: "form-control", placeholder: "Number of views/hours"
+  end
+
   submit 'Send message', class: 'btn btn-default'
 end %>
+<hr>
