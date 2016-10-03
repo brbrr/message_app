@@ -39,11 +39,12 @@ Hanami::Model.configure do
       entity     Message
       repository MessageRepository
 
-      attribute :id,            Integer
-      attribute :text,          String
-      attribute :trigger_id,    Integer
-      attribute :created_at,    DateTime
-      attribute :updated_at,    DateTime
+      attribute :id,             Integer
+      attribute :encrypted_text, String
+      attribute :encrypted_text_iv, String
+      attribute :trigger_id,     Integer
+      attribute :created_at,     DateTime
+      attribute :updated_at,     DateTime
     end
 
     collection :triggers do

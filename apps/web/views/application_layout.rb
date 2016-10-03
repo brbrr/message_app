@@ -7,9 +7,22 @@ module Web
         html.div(class: 'form-group') do
           div(class: 'radio') do
             label do
-              input(name: :trigger, type: 'radio', value: radio_name)
+              input(name: 'trigger[type]', type: 'radio', value: radio_name)
               text(text_value)
             end
+          end
+        end
+      end
+
+      def radio_group
+        html.div(class: 'btn-group', 'data-toggle' => 'buttons') do
+          label(class: 'btn btn-primary') do
+            input(name: 'trigger[value]', type: 'radio', autocomplete: 'off', value: :views)
+            text('Expire by views')
+          end
+          label(class: 'btn btn-primary') do
+            input(name: 'trigger[type]', type: 'radio', autocomplete: 'off', value: :hours)
+            text('Expire by timeout')
           end
         end
       end

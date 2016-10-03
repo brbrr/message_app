@@ -1,20 +1,22 @@
+<%=local :params_error %>
+<% unless params.valid? %>
+  <ul>
+    <% params.error_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
 <%= local :created %>
 <%= form_for :message, routes.root_path do
   div(class: 'form-group') do
     label 'Message Text'
     text_area :text, class: "form-control", rows: "3", placeholder: "Type your message here"
   end
-
   div(class: 'form-group') do
-    radio_btn(:views, 'Expire by view')
+    radio_group
   end
-
   div(class: 'form-group') do
-    radio_btn(:hours, 'Expire after 1 hour')
-  end
-
-  div(class: 'form-group') do
-    text_field :value, class: "form-control", placeholder: "Number of views/hours"
+    text_field :value, name: 'trigger[value]', class: "form-control", placeholder: "Number of views/hours"
   end
 
   submit 'Send message', class: 'btn btn-default'

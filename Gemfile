@@ -7,6 +7,7 @@ gem 'hanami-model', '~> 0.6'
 
 gem 'pg'
 gem 'hashids'
+gem "attr_encrypted"
 
 group :development do
   # Code reloading
