@@ -97,6 +97,7 @@ GEM
       pkg-config (~> 1.1.7)
     pg (0.19.0)
     pkg-config (1.1.7)
+    puma (3.4.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -136,6 +137,7 @@ DEPENDENCIES
   hanami-model (~> 0.6)
   hashids
   pg
+  puma
   rake
   rspec
   shotgun
