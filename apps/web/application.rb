@@ -328,7 +328,7 @@ module Web
         # Use digest file name for asset paths
         #
         # See: http://hanamirb.org/guides/assets/overview
-        digest  false # true
+        digest true
 
         # Content Delivery Network (CDN)
         #
