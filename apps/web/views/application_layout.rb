@@ -17,7 +17,7 @@ module Web
       def radio_group
         html.div(class: 'btn-group', 'data-toggle' => 'buttons') do
           label(class: 'btn btn-primary') do
-            input(name: 'trigger[value]', type: 'radio', autocomplete: 'off', value: :views)
+            input(name: 'trigger[type]', type: 'radio', autocomplete: 'off', value: :views)
             text('Expire by views')
           end
           label(class: 'btn btn-primary') do
