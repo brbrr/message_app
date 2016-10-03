@@ -149,7 +149,6 @@ module Web
         #
         sources << [
           'assets',
-          'vendor'
         ]
       end
 
