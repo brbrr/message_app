@@ -305,6 +305,7 @@ module Web
     configure :production do
       # scheme 'https'
       # host   'example.org'
+      host 'kottans-message-app.herokuapp.com'
       # port   443
 
       # Logger
