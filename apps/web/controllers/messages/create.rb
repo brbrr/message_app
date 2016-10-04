@@ -9,7 +9,7 @@ module Web::Controllers::Messages
 
       required(:trigger).schema do
         required(:type).filled
-        required(:value).filled(:int?, gt?: 0)
+        optional(:value).filled(:int?, gt?: 0)
       end
     end
 

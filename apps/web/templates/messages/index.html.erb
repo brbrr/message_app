@@ -15,9 +15,19 @@ end
   div(class: 'form-group') do
     radio_group
   end
+
+
   div(class: 'form-group') do
-    text_field :value, name: 'trigger[value]', class: "form-control", placeholder: "Number of views/hours"
+    label 'Number of views/hours'
+    number_field :value, name: 'trigger[value]', class: "form-control", value: '1', placeholder: "Number of views/hours"
   end
+
+  # div(class: 'form-group') do
+  #   label 'Password:'
+  #   password_field :password, class: "form-control"
+  #   hidden_field :encrypted_message
+  # end
+
 
   submit 'Send message', class: 'btn btn-default'
 end %>

@@ -3,17 +3,6 @@ module Web
     class ApplicationLayout
       include Web::Layout
 
-      def radio_btn(radio_name, text_value)
-        html.div(class: 'form-group') do
-          div(class: 'radio') do
-            label do
-              input(name: 'trigger[type]', type: 'radio', value: radio_name)
-              text(text_value)
-            end
-          end
-        end
-      end
-
       def radio_group
         html.div(class: 'btn-group', 'data-toggle' => 'buttons') do
           label(class: 'btn btn-primary') do
@@ -25,6 +14,14 @@ module Web
             text('Expire by timeout')
           end
         end
+      end
+
+      def controller_name
+        @scope.view.class.name.split('::')[2].downcase
+      end
+
+      def action_name
+        @scope.view.class.name.split('::')[3].downcase
       end
     end
   end
