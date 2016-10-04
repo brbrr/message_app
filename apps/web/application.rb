@@ -303,10 +303,10 @@ module Web
     # PRODUCTION
     #
     configure :production do
-      # scheme 'https'
+      scheme 'https'
       # host   'example.org'
       host 'kottans-message-app.herokuapp.com'
-      # port   443
+      port   443
 
       # Logger
       # See: http://hanamirb.org/guides/applications/logging
