@@ -1,17 +1,8 @@
 <hr>
 <div class="row">
-  <%= message.text %>
-  <div class="">
-    <%= message.trigger.type %>
-  </div>
-  <div class="">
-    <%= message.trigger.created_at %>
-  </div>
-  <div class="">
-    <%= message.trigger.updated_at %>
-  </div>
-  <div class="">
-    <%= message.trigger.views %>
+  <h4>Your message:</h4>
+  <div class="well well-sm">
+    <%= message.text %>
   </div>
   <%= link_to 'Back', routes.root_path, class: 'btn btn-default', title: 'Go back' %>
 </div>

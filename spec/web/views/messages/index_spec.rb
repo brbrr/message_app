@@ -9,4 +9,8 @@ RSpec.describe Web::Views::Messages::Index do
   it 'exposes #foo' do
     expect(view.foo).to eq exposures.fetch(:foo)
   end
+
+  it 'render' do
+
+  end
 end

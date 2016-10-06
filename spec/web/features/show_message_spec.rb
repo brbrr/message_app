@@ -3,7 +3,8 @@ require 'features_helper'
 describe 'Show message text' do
   before do
     MessageRepository.clear
-    mess = MessageRepository.create(Message.new(text: 'Hi there!'))
+    params = Hash[message: { text: 'Hi there!' }, trigger: { type: 'views', value: 3 }]
+    mess = create_message(params)
     @id = mess.id
   end
 

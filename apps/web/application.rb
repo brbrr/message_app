@@ -279,7 +279,7 @@ module Web
       # logger.stream "log/development.log"
       #
       # Logger level. It defaults to DEBUG
-      # logger.level :debug
+      logger.level :debug
       #
       # Logger format. It defaults to DEFAULT
       # logger.format :default
@@ -305,7 +305,7 @@ module Web
     configure :production do
       scheme 'https'
       # host   'example.org'
-      host 'kottans-message-app.herokuapp.com'
+      host   'kottans-message-app.herokuapp.com'
       port   443
 
       # Logger

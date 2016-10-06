@@ -5,18 +5,18 @@ RSpec.describe Trigger do
     TriggerRepository.clear
   end
 
-  context '#valid?' do
+  context '#expired?' do
     it 'check expired triggers' do
-      trigger = TriggerRepository.create(Trigger.new(type: 'hours'))
-      trigger.created_at = DateTime.now - (2.0 / 24)
-      expect(trigger).not_to be_valid
+      trigger = TriggerRepository.create(Trigger.new(type: 'hours', value: 0))
+      trigger.created_at = Time.now - (3 * 60 * 60)
+      expect(trigger).to be_expired
     end
 
     it 'validate views' do
-      trigger = TriggerRepository.create(Trigger.new(type: 'views'))
+      trigger = TriggerRepository.create(Trigger.new(type: 'views', value: 1))
       trigger_from_db = TriggerRepository.find(trigger.id)
-      trigger_from_db.views += 1
-      expect(trigger_from_db).not_to be_valid
+      trigger_from_db.value -= 1
+      expect(trigger_from_db).to be_expired
     end
   end
 end

@@ -9,12 +9,13 @@ describe 'Messages' do
     visit '/'
 
     within 'form#message-form' do
-      fill_in 'text', with: 'Hi there!'
-
-      click_button 'send'
+      fill_in 'message-text', with: 'Hi there!'
+      fill_in 'message-value', with: '2'
+      choose('Expire by views')
+      click_button 'Send message'
     end
 
-    expect(current_path).not_to eq('/')
-    expect(page).to have_text('Hi there!')
+    expect(current_path).to eq('/')
+    expect(page).to have_text('Success! Message was created here')
   end
 end

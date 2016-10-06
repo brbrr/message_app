@@ -43,8 +43,8 @@ Hanami::Model.configure do
       attribute :encrypted_text, String
       attribute :encrypted_text_iv, String
       attribute :trigger_id,     Integer
-      attribute :created_at,     DateTime
-      attribute :updated_at,     DateTime
+      attribute :created_at,     Time
+      attribute :updated_at,     Time
     end
 
     collection :triggers do
@@ -53,9 +53,9 @@ Hanami::Model.configure do
 
       attribute :id,            Integer
       attribute :type,          String
-      attribute :views,         Integer
-      attribute :created_at,    DateTime
-      attribute :updated_at,    DateTime
+      attribute :value,         Integer
+      attribute :created_at,    Time
+      attribute :updated_at,    Time
     end
   end
 end.load!
