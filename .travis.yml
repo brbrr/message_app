@@ -1,0 +1,8 @@
+language: ruby
+services:
+  - postgresql
+rvm:
+ - 2.2
+before_script:
+  - bundle exec hanami db prepare
+script: bundle exec rspec spec
