@@ -10,7 +10,12 @@ module Web::Views::Messages
           a(url, href: url, class: 'alert-link')
         end
       else
-        html.p(params.errors.to_s)
+        html.div(class: 'alert alert-danger', role: 'alert') do
+          strong('Please fix the errors:')
+          ul(class: 'list-unstyled errors') do
+            params.error_messages.each { |error| li(error) }
+          end
+        end
       end
     end
 
