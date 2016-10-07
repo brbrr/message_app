@@ -3,7 +3,7 @@ Web application which creates a text self-destructing messages.
 
 Build using Hanami framework and Postgres.
 
-Task:
+Tasks:
 
 1. generate a safe link to saved message
 2. User should be able to choose destruction option:
