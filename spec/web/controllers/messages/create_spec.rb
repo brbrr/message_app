@@ -86,7 +86,7 @@ RSpec.describe Web::Controllers::Messages::Create do
       params[:trigger].delete(:value)
       action.call(params)
 
-      expect(action.params.error_messages).to include 'Value is missing'
+      expect(action.params.error_messages).not_to include 'Value is missing'
     end
 
     it 'when trigger.value is string' do
