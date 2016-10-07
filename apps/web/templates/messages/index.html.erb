@@ -11,11 +11,11 @@
   div(class: 'form-group') do
     label 'Message Text'
     text_area :text, class: "form-control", rows: "3", placeholder: "Type your message here"
-end
+  end
+  
   div(class: 'form-group') do
     radio_group
   end
-
 
   div(class: 'form-group') do
     label 'Number of views/hours'
@@ -27,7 +27,6 @@ end
   #   password_field :password, class: "form-control"
   #   hidden_field :encrypted_message
   # end
-
 
   submit 'Send message', class: 'btn btn-default'
 end %>
