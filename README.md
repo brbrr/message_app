@@ -1,3 +1,5 @@
+1
+
 Test assignemnt to kottans.org Ruby course.
 Web application which creates a text self-destructing messages.
 
