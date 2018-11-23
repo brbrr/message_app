@@ -1,4 +1,4 @@
-Test assignemnt to kottans.org Ruby course.
+.Test assignemnt to kottans.org Ruby course.
 Web application which creates a text self-destructing messages.
 
 Build using Hanami framework and Postgres.
