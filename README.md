@@ -1,9 +1,13 @@
+1
+
 Test assignemnt to kottans.org Ruby course.
 Web application which creates a text self-destructing messages.
 
 Build using Hanami framework and Postgres.
 
 Tasks:
+
+test
 
 1. generate a safe link to saved message
 2. User should be able to choose destruction option:
