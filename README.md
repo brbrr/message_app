@@ -7,6 +7,8 @@ Build using Hanami framework and Postgres.
 
 Tasks:
 
+test
+
 1. generate a safe link to saved message
 2. User should be able to choose destruction option:
  - destroy message after the first link visit
